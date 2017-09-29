@@ -2,19 +2,19 @@
 require_once('model.php');
 class modelAccounts extends model{
     /**
-     * Õðàíèëèùå îøèáîê
+     * Ð¥Ñ€Ð°Ð½Ð¸Ð»Ð¸Ñ‰Ðµ Ð¾ÑˆÐ¸Ð±Ð¾Ðº
      * @var array
      */
     public $errors = array();
     /**
-     * Èìÿ òàáëèöû
+     * Ð˜Ð¼Ñ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹
      * @return string
      */
     public function getTable(){
         return 'accounts';
     }
     /**
-     * Ïðàâèëà äëÿ ïîëåé òàáëèöû user
+     * ÐŸÑ€Ð°Ð²Ð¸Ð»Ð° Ð´Ð»Ñ Ð¿Ð¾Ð»ÐµÐ¹ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹ user
      * @return array
      */
     public function rules(){
@@ -24,7 +24,7 @@ class modelAccounts extends model{
         );
     }
     /**
-     * Äîáàâëåíèå àêêàóíòà
+     * Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð°ÐºÐºÐ°ÑƒÐ½Ñ‚Ð°
      * @param $data Array
      * @return bool
      */
@@ -44,7 +44,7 @@ class modelAccounts extends model{
 
                 $result = $addAcc->execute();
             } catch(Exception $e){
-                echo 'Âûáðîøåíî èñêëþ÷åíèå: ',  $e->getMessage(), "\n";
+                echo 'Ð’Ñ‹Ð±Ñ€Ð¾ÑˆÐµÐ½Ð¾ Ð¸ÑÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ðµ: ',  $e->getMessage(), "\n";
                 exit;
             }
 
@@ -61,13 +61,13 @@ class modelAccounts extends model{
 
         $modelUser = new modelUsers();
         if(!$modelUser->isUser($data['user_id'])){
-            $this->setError('user_id', 'Íåò òàêîãî ïîëüçîâàòåëÿ');
+            $this->setError('user_id', 'ÐÐµÑ‚ Ñ‚Ð°ÐºÐ¾Ð³Ð¾ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ');
         }
 
         return count($this->errors) < 1;
     }
     /**
-     * Ñïèñîê îøèáîê
+     * Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð¾ÑˆÐ¸Ð±Ð¾Ðº
      * @return array
      */
     public function getErrors(){

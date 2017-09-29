@@ -10,14 +10,14 @@ class Accounts {
     private $model;
 
     /**
-     * инициируем модель
+     * РёРЅРёС†РёРёСЂСѓРµРј РјРѕРґРµР»СЊ
      */
     public function __construct(){
         $this->model = new modelAccounts();
     }
 
     /**
-     * Добавление аккаунта
+     * Р”РѕР±Р°РІР»РµРЅРёРµ Р°РєРєР°СѓРЅС‚Р°
      * @param $data Array
      * @return string
      */

@@ -11,7 +11,7 @@ class Db {
     const  DB = "test-php";
 
     /**
-     * Подключаем БД
+     * РџРѕРґРєР»СЋС‡Р°РµРј Р‘Р”
      * @return null|PDO
      */
     public static function instance(){
@@ -27,7 +27,7 @@ class Db {
     }
 
     /**
-     * Предотвращаем дублирование соединения
+     * РџСЂРµРґРѕС‚РІСЂР°С‰Р°РµРј РґСѓР±Р»РёСЂРѕРІР°РЅРёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ
      */
     private function __sleep(){}
     private function __wakeup(){}

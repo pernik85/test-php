@@ -8,20 +8,20 @@ class Users {
     private $model;
 
     /**
-     * инициируем модель
+     * РёРЅРёС†РёРёСЂСѓРµРј РјРѕРґРµР»СЊ
      */
     public function __construct(){
         $this->model = new modelUsers();
     }
     /**
-     * Достаем список пользователей с их аккаунтами
+     * Р”РѕСЃС‚Р°РµРј СЃРїРёСЃРѕРє РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ СЃ РёС… Р°РєРєР°СѓРЅС‚Р°РјРё
      * @return array
      */
     public function getUsersWithAccounts(){
         return $this->model->getListDataUsers();
     }
     /**
-     * Достаем список пользователей с их аккаунтами
+     * Р”РѕСЃС‚Р°РµРј СЃРїРёСЃРѕРє РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ СЃ РёС… Р°РєРєР°СѓРЅС‚Р°РјРё
      * @return array
      */
     public function getUsers(){

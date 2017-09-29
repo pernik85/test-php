@@ -2,19 +2,19 @@
 require_once('model.php');
 class modelUsers extends model{
     /**
-     * Хранилище ошибок
+     * РҐСЂР°РЅРёР»РёС‰Рµ РѕС€РёР±РѕРє
      * @var array
      */
     public $errors = array();
     /**
-     * Имя таблицы
+     * РРјСЏ С‚Р°Р±Р»РёС†С‹
      * @return string
      */
     public function getTable(){
         return 'users';
     }
     /**
-     * Правила для полей таблицы user
+     * РџСЂР°РІРёР»Р° РґР»СЏ РїРѕР»РµР№ С‚Р°Р±Р»РёС†С‹ user
      * @return array
      */
     public function rules(){
@@ -25,7 +25,7 @@ class modelUsers extends model{
         );
     }
     /**
-     * Добавляем нового пользователя
+     * Р”РѕР±Р°РІР»СЏРµРј РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
      * @param $data Array
      * @return bool
      */
@@ -48,7 +48,7 @@ class modelUsers extends model{
     }
 
     /**
-     * Наличие пользователя
+     * РќР°Р»РёС‡РёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
      * @param $id
      * @return bool
      */
@@ -58,7 +58,7 @@ class modelUsers extends model{
     }
 
     /**
-     * Получаем список данных пользователе из БД
+     * РџРѕР»СѓС‡Р°РµРј СЃРїРёСЃРѕРє РґР°РЅРЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»Рµ РёР· Р‘Р”
      * @return array
      */
     public function getListDataUsers(){
@@ -67,7 +67,7 @@ class modelUsers extends model{
     }
 
     /**
-     * Получаем список пользователе из БД
+     * РџРѕР»СѓС‡Р°РµРј СЃРїРёСЃРѕРє РїРѕР»СЊР·РѕРІР°С‚РµР»Рµ РёР· Р‘Р”
      * @return array
      */
     public function getListUsers(){
@@ -76,7 +76,7 @@ class modelUsers extends model{
     }
 
     /**
-     * Список ошибок
+     * РЎРїРёСЃРѕРє РѕС€РёР±РѕРє
      * @return array
      */
     public function getErrors(){
